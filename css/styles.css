@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 :root {
+  /*цвет*/
   --main-background-color: rgba(255, 255, 255, 1);
   --secondary-background-color: rgba(245, 244, 250, 1);
   --footer-background-color: #2f303a;
@@ -22,6 +23,13 @@
   --card-overlay: rgba(33, 150, 243, 0.9);
   --join-email-border: rgba(255, 255, 255, 0.3);
   --form-input: rgba(33, 33, 33, 0.2);
+  /*шрифт*/
+  --main-font-family: "Roboto", sans-serif;
+  --secondary-font-family: Raleway;
+  --font-weigh-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 900;
 }
 /*общие стили*/
 body {
@@ -29,7 +37,7 @@ body {
 
   background-color: var(--main-background-color);
   color: var(--main-text-color);
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-font-family);
   font-style: normal;
   letter-spacing: 0.03em;
 }
@@ -65,7 +73,7 @@ p {
   color: var(--main-background-color);
   background-color: var(--accent-color);
   font-family: inherit;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
@@ -89,19 +97,42 @@ p {
   height: 1px;
   margin: -1px;
 }
+/*соц-сети*/
+.socials {
+  display: flex;
+  justify-content: center;
+  padding: 16px 32px 30px;
+}
+.socials-background {
+  display: block;
+  padding: 12px;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: var(--icon-background);
+  color: var(--icon-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials-background:nth-child(4n) {
+  margin-right: 0;
+}
+.socials-background:hover,
+.socials-background:focus {
+  background-color: var(--accent-color);
+  color: var(--main-background-color);
+}
+.socials-icon {
+  fill: currentColor;
+}
 /*хедер*/
-.site-nav {
-  display: flex;
-}
-.nav {
-  display: flex;
-  align-items: center;
-}
 /*лого*/
 .logo {
   color: var(--accent-color);
-  font-family: Raleway;
-  font-weight: 700;
+  font-family: var(--secondary-font-family);
+  font-weight: var(--font-weight-bold);
   font-size: 26px;
   line-height: 1.2;
 }
@@ -109,6 +140,13 @@ p {
   color: var(--main-text-color);
 }
 /*навигация*/
+.site-nav {
+  display: flex;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
 .main-nav {
   display: flex;
   align-items: center;
@@ -121,7 +159,7 @@ p {
   padding-bottom: 32px;
 
   color: var(--main-text-color);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -196,7 +234,7 @@ p {
   padding: 0 20px 0 20px;
 
   color: var(--main-background-color);
-  font-weight: 900;
+  font-weight: var(--font-weight-heavy);
   font-size: 44px;
   line-height: 1.36;
   text-transform: uppercase;
@@ -230,7 +268,7 @@ p {
   margin-top: 10px;
 
   color: var(--secondary-text-color);
-  font-weight: 400;
+  font-weight: var(--font-weigh-normal);
   font-size: 14px;
   line-height: 1.71;
 }
@@ -268,7 +306,7 @@ p {
   position: absolute;
   bottom: 27px;
 
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--main-background-color);
 }
 /*команда*/
@@ -298,42 +336,13 @@ p {
 .specialists {
   margin-top: 30px;
 
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 .professions {
   margin-top: 10px;
 
   color: var(--secondary-text-color);
-  font-weight: 400;
-}
-.socials {
-  display: flex;
-  justify-content: center;
-  padding: 16px 32px 30px;
-}
-.socials-background {
-  display: block;
-  padding: 12px;
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background-color: var(--icon-background);
-  color: var(--icon-color);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.socials-background:nth-child(4n) {
-  margin-right: 0;
-}
-.socials-background:hover,
-.socials-background:focus {
-  background-color: var(--accent-color);
-  color: var(--main-background-color);
-}
-.socials-icon {
-  fill: currentColor;
+  font-weight: var(--font-weigh-normal);
 }
 /*постоянные клиенты*/
 .clients {
@@ -386,7 +395,7 @@ p {
 
   background-color: var(--secondary-background-color);
   font-family: inherit;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
@@ -491,7 +500,7 @@ p {
   margin-top: 4px;
 
   color: var(--secondary-text-color);
-  font-weight: normal;
+  font-weight: var(--font-weigh-normal);
   font-size: 16px;
   line-height: 1.9;
 }
@@ -514,7 +523,7 @@ p {
 .address {
   color: var(--main-background-color);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weigh-normal);
   font-size: 14px;
   line-height: 1.71;
 }
@@ -532,7 +541,7 @@ p {
   justify-content: center;
 }
 .join-title {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--main-background-color);
 }
 .join-socials {
@@ -654,7 +663,7 @@ p {
 }
 .modal-header {
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: 20px;
   line-height: 1.04;
   text-align: center;

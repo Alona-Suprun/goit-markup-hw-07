@@ -1,0 +1,13 @@
+/*линки-контакты*/
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+.contacts .item + .item {
+  margin-left: 50px;
+}
+.contacts-icon {
+  padding: 0px;
+  margin-right: 10px;
+  fill: currentColor;
+}

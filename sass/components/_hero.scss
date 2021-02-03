@@ -1,0 +1,42 @@
+/*герой*/
+.hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: $footer-background-color;
+  letter-spacing: 0.06em;
+}
+.overlay {
+  max-width: 1600px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $hero-backgroumd;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../img/img.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px 0 20px;
+
+  color: $main-background-color;
+  font-weight: $font-weight-heavy;
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+.hero-button {
+  margin-top: 30px;
+  padding: 10px 32px;
+}

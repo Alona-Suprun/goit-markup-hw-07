@@ -1,0 +1,29 @@
+/*преимущества*/
+.advantages {
+  display: flex;
+  .item {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+  }
+  .item:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+.advantages-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: $secondary-background-color;
+}
+.advantages-title {
+  margin-top: 30px;
+}
+.advantages-text {
+  margin-top: 10px;
+
+  color: $secondary-text-color;
+  font-weight: $font-weigh-normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
